@@ -7,7 +7,7 @@ import AboutUs from "../components/About-us/AboutUs";
 import Courses from "../components/Courses-section/Courses";
 import ChooseUs from "../components/Choose-us/ChooseUs";
 import Features from "../components/Feature-section/Features";
-import FreeCourse from "../components/Free-course-section/FreeCourse";
+import Announcements from "../components/Announcements/Announcements";
 
 import Testimonials from "../components/Testimonial/Testimonials";
 
@@ -24,9 +24,8 @@ const Home = () => {
       <Courses />
       <ChooseUs />
       <Features />
-      <FreeCourse />
+      <Announcements />
       <Testimonials />
-      <Newsletter />
       <Footer />
     </Fragment>
   );

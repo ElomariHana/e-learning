@@ -1,8 +1,13 @@
 import React from "react";
 import "./about.css";
 import { Container, Row, Col } from "reactstrap";
-import aboutImg from "../../assests/images/about-us.png";
+import aboutImg from "../../assests/images/about-us.webp";
 import CountUp from "react-countup";
+import { GrProjects } from "react-icons/gr";
+import { FaSwatchbook } from "react-icons/fa6";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { MdTopic } from "react-icons/md";
+
 import "./about.css";
 
 const AboutUs = () => {
@@ -20,45 +25,43 @@ const AboutUs = () => {
             <div className="about__content">
               <h2>About Us</h2>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Excepturi cupiditate animi deserunt libero nesciunt corporis
-                explicabo nobis ex quo molestiae!
+              Welcome to NetSecCloud Learn, where we empower your journey in networking, security, 
+              and cloud computing. Our mission is to provide you with high-quality, practical education 
+              that helps you master the essential skills in these critical fields.
               </p>
 
               <div className="about__counter">
                 <div className=" d-flex gap-5 align-items-center">
                   <div className="single__counter">
                     <span className="counter">
-                      <CountUp start={0} end={25} duration={2} suffix="K" />
+                    <FaSwatchbook style={{ color: '#17bf9e', fontSize: '27px', marginRight: '10px' }}/>
                     </span>
 
-                    <p className="counter__title">Completed Projects</p>
+                    <p className="counter__title">Courses Completed (10K)</p>
                   </div>
 
                   <div className="single__counter">
                     <span className="counter">
-                      <CountUp start={0} end={12} duration={2} suffix="M" />
+                    <FaPeopleGroup style={{ color: '#17bf9e', fontSize: '27px', marginRight: '10px' }}/>
                     </span>
-
-                    <p className="counter__title">Patient Around World</p>
+                    <p className="counter__title">Learners Worldwide (12K)</p>
                   </div>
                 </div>
 
                 <div className=" d-flex gap-5 align-items-center">
                   <div className="single__counter">
                     <span className="counter">
-                      <CountUp start={0} end={95} duration={2} suffix="M" />
+                    <GrProjects style={{ color: '#17bf9e', fontSize: '27px', marginRight: '10px' }}/>
                     </span>
-
-                    <p className="counter__title">Ideas Raised Funds</p>
+                    <p className="counter__title">Projects Completed (90K)</p>
                   </div>
 
                   <div className="single__counter">
                     <span className="counter">
-                      <CountUp start={0} end={5} duration={2} suffix="K" />
+                    <MdTopic style={{ color: '#17bf9e', fontSize: '27px', marginRight: '10px' }}/>
                     </span>
 
-                    <p className="counter__title">Categories Served</p>
+                    <p className="counter__title">Topics Covered</p>
                   </div>
                 </div>
               </div>

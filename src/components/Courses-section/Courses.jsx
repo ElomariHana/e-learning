@@ -1,35 +1,35 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import courseImg1 from "../../assests/images/web-design.png";
-import courseImg2 from "../../assests/images/graphics-design.png";
-import courseImg3 from "../../assests/images/ui-ux.png";
+import courseImg1 from "../../assests/images/networking.jpg";
+import courseImg2 from "../../assests/images/visuel-cyber.jpg";
+import courseImg3 from "../../assests/images/cloud.jpg";
 import "./courses.css";
 import CourseCard from "./CourseCard";
 
 const coursesData = [
   {
     id: "01",
-    title: "Web Design BootCamp-2022 for Beginners",
+    title: "Mastering Network Fundamentals",
     lesson: 12,
-    students: 12.5,
+    price: 100,
     rating: 5.9,
     imgUrl: courseImg1,
   },
 
   {
     id: "02",
-    title: "Professional Graphics Design, PhotoShop, Adobe XD, Figma",
+    title: "Network Security Essentials",
     lesson: 12,
-    students: 12.5,
+    price: 150,
     rating: 5.9,
     imgUrl: courseImg2,
   },
 
   {
     id: "03",
-    title: "UI/UX BootCamp for Beginners in 2022",
+    title: "Cloud Computing Essentials",
     lesson: 12,
-    students: 12.5,
+    price: 120,
     rating: 5.9,
     imgUrl: courseImg3,
   },
@@ -43,11 +43,10 @@ const Courses = () => {
           <Col lg="12" className="mb-5">
             <div className="course__top d-flex justify-content-between align-items-center">
               <div className="course__top__left w-50">
-                <h2>Our Popular Courses</h2>
+                <h2>Our Courses</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                  consequatur libero quod voluptatibus ullam quia quas, vitae
-                  voluptatem recusandae reprehenderit!
+                Explore our top courses designed to enhance your skills and knowledge in networking, security, and cloud computing. 
+                Each course is crafted by industry experts to provide you with practical, hands-on learning experiences.
                 </p>
               </div>
 

@@ -1,5 +1,9 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import { SiSololearn } from "react-icons/si";
+import { FaRegMap } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 import "./footer.css";
 
@@ -9,17 +13,19 @@ const footerQuickLinks = [
     url: "#",
   },
   {
-    display: "About US",
-    url: "#",
-  },
-
-  {
     display: "Courses",
     url: "#",
   },
-
   {
-    display: "Blog",
+    display: "About US",
+    url: "#",
+  },
+  {
+    display: "Announcements",
+    url: "#",
+  },
+  {
+    display: "Contact",
     url: "#",
   },
 ];
@@ -52,7 +58,7 @@ const Footer = () => {
         <Row>
           <Col lg="3" md="6" className="mb-4">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> Learners.
+            <SiSololearn style={{ color: '#17bf9e', fontSize: '30px', marginRight: '5px' }}/> NetSecCloud
             </h2>
 
             <div className="follows">
@@ -114,9 +120,9 @@ const Footer = () => {
           <Col lg="3" md="6">
             <h6 className="fw-bold">Get in Touch</h6>
 
-            <p>Address: Sylhet, Bangladesh</p>
-            <p> Phone: +88 0123456789 </p>
-            <p>Email: example@gmail.com</p>
+            <p><FaRegMap style={{ color: '#17bf9e', fontSize: '15px', marginRight: '5px' }}/> Address: Paris, France</p>
+            <p><FaPhoneAlt style={{ color: '#17bf9e', fontSize: '15px', marginRight: '5px' }}/> Phone: +33 0123456789 </p>
+            <p><IoMail style={{ color: '#17bf9e', fontSize: '15px', marginRight: '5px' }}/> Email: example@gmail.com</p>
           </Col>
         </Row>
       </Container>

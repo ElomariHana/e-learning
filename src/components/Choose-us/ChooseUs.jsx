@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 
-import chooseImg from "../../assests/images/why-choose-us.png";
+import chooseImg from "../../assests/images/b3.png";
 import "./choose-us.css";
 
 import ReactPlayer from "react-player";
@@ -14,15 +14,17 @@ const ChooseUs = () => {
         <Row>
           <Col lg="6" md="6">
             <div className="choose__content">
-              <h2>Why Choose Us</h2>
+              <h2>Why Select Us</h2>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt mollitia nostrum harum eos praesentium odit a sed quod
-                aut fugit. Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Reprehenderit omnis, culpa eligendi inventore perspiciatis
-                minus. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolores cupiditate facilis provident quidem accusamus impedit
-                tenetur laboriosam debitis nisi eius!
+              At NetSecCloud Learn, we are committed to providing you with the best educational experience in networking, security, and cloud computing. Here’s why you should choose us:
+              Hands-On Learning
+Gain practical experience through hands-on projects and real-world scenarios. Our interactive courses ensure you can apply what you learn immediately.
+
+Flexible Learning
+Access our comprehensive course materials anytime, anywhere. Learn at your own pace with our on-demand video lessons and flexible learning schedules.
+
+Global Community
+Join a thriving community of learners and professionals from around the world. Engage in discussions, share your progress, and collaborate on projects.
               </p>
             </div>
           </Col>
