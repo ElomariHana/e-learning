@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/e-learning/static/css/main.5e1aae9f.css",
+    "main.js": "/e-learning/static/js/main.49e9f925.js",
+    "static/media/remixicon.svg?t=1590207869815": "/e-learning/static/media/remixicon.9cedd2150922ead84869.svg",
+    "static/media/remixicon.eot?t=1590207869815": "/e-learning/static/media/remixicon.5cb99e6cba5a4619063f.eot",
+    "static/media/remixicon.ttf?t=1590207869815": "/e-learning/static/media/remixicon.f2616f597cf98f38d234.ttf",
+    "static/media/remixicon.woff?t=1590207869815": "/e-learning/static/media/remixicon.8d09fa11700ed63cf96e.woff",
+    "static/media/visuel-cyber.jpg": "/e-learning/static/media/visuel-cyber.73204e2562d170f2dd9c.jpg",
+    "static/media/remixicon.woff2?t=1590207869815": "/e-learning/static/media/remixicon.90668f6f9b3c2c18a090.woff2",
+    "static/media/Cyber-Security.jpg": "/e-learning/static/media/Cyber-Security.6ab1b9ac7286c575416f.jpg",
+    "static/media/networking.jpg": "/e-learning/static/media/networking.3bb0efdb662e3e450a07.jpg",
+    "static/media/b3.png": "/e-learning/static/media/b3.ca529ec00626375a6a79.png",
+    "static/media/cloud.jpg": "/e-learning/static/media/cloud.8b107f02c3938ea00a68.jpg",
+    "static/media/hero-img1.png": "/e-learning/static/media/hero-img1.de3bac9e263d382c6888.png",
+    "static/media/machine-learning.jpg": "/e-learning/static/media/machine-learning.b0363ab7725b8869fef9.jpg",
+    "static/media/about-us.webp": "/e-learning/static/media/about-us.70157d5c97cdb1ed20bf.webp",
+    "static/media/personne.webp": "/e-learning/static/media/personne.19c2403247febe72d506.webp",
+    "static/media/slick.svg": "/e-learning/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/e-learning/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/e-learning/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/e-learning/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/e-learning/index.html",
+    "main.5e1aae9f.css.map": "/e-learning/static/css/main.5e1aae9f.css.map",
+    "main.49e9f925.js.map": "/e-learning/static/js/main.49e9f925.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e1aae9f.css",
+    "static/js/main.49e9f925.js"
+  ]
+}
