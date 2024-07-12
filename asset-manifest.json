@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/e-learning/static/css/main.5e1aae9f.css",
-    "main.js": "/e-learning/static/js/main.976bb3ae.js",
+    "main.css": "/e-learning/static/css/main.6276eef0.css",
+    "main.js": "/e-learning/static/js/main.72768387.js",
     "static/media/remixicon.svg?t=1590207869815": "/e-learning/static/media/remixicon.9cedd2150922ead84869.svg",
     "static/media/remixicon.eot?t=1590207869815": "/e-learning/static/media/remixicon.5cb99e6cba5a4619063f.eot",
     "static/media/remixicon.ttf?t=1590207869815": "/e-learning/static/media/remixicon.f2616f597cf98f38d234.ttf",
@@ -21,11 +21,11 @@
     "static/media/slick.ttf": "/e-learning/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/e-learning/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/e-learning/index.html",
-    "main.5e1aae9f.css.map": "/e-learning/static/css/main.5e1aae9f.css.map",
-    "main.976bb3ae.js.map": "/e-learning/static/js/main.976bb3ae.js.map"
+    "main.6276eef0.css.map": "/e-learning/static/css/main.6276eef0.css.map",
+    "main.72768387.js.map": "/e-learning/static/js/main.72768387.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e1aae9f.css",
-    "static/js/main.976bb3ae.js"
+    "static/css/main.6276eef0.css",
+    "static/js/main.72768387.js"
   ]
 }
