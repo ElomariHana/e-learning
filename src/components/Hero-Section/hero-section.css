@@ -24,3 +24,10 @@
   color: #fff;
 
 }
+@media (max-width: 768px) {  
+  .pi-icon {
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 200px;
+  }
+}

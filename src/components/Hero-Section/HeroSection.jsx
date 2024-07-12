@@ -35,7 +35,7 @@ const HeroSection = () => {
           </Col>
 
           <Col lg="6" md="6">
-          <PiNetworkLight style={{ color: '#17bf9e', fontSize: '400px', marginLeft: '200px' }}/>
+          <PiNetworkLight className="pi-icon" style={{ color: '#17bf9e', fontSize: '400px', marginLeft: '200px' }}/>
           </Col>
         </Row>
       </Container>
