@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="elearning__navbar-links">
         <div className="elearning__navbar-links_logo">
         <h2 className="d-flex align-items-center gap-1">
-          <SiSololearn style={{ color: '#17bf9e', fontSize: '30px', marginRight: '5px', marginLeft: '30px' }} />
+          <SiSololearn style={{ color: '#17bf9e', fontSize: '30px', marginRight: '5px' }} />
           NetSecCloud
         </h2>
         </div>
