@@ -51,7 +51,7 @@ const Courses = () => {
               </div>
 
               <div className="w-50 text-end">
-                <button className="btn">See All</button>
+                <button className="button">See All</button>
               </div>
             </div>
           </Col>
