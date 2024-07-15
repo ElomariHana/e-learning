@@ -12,7 +12,7 @@ const HeroSection = () => (
       <p>Are you ready to master the critical skills needed in today's tech-driven world ? At NetSecCloud, we offer a comprehensive e-learning experience designed for aspiring and seasoned professionals alike.</p>
 
       <div className="elearning__header-content__input">
-        <button className="btn" type="button">Get Started</button>
+        <button className="get_started" type="button">Get Started</button>
         <button className="btn1" type="button">View Course</button>
       </div>
 

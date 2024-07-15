@@ -70,8 +70,9 @@
   width: 181.79px;
   height: 38px;
 }
-.btn {
+.get_started {
   background: #17bf9e;
+  border: 0.5px solid #17bf9e;
   color: #fff;
   padding: 7px 25px;
   border-radius: 10px;
