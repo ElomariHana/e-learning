@@ -1,46 +1,31 @@
-import React from "react";
-import { Container, Row, Col } from "reactstrap";
-import heroImg from "../../assests/images/hero-img1.png";
-import "./hero-section.css";
-import { FaNetworkWired } from "react-icons/fa6";
-import { IoIosCloud } from "react-icons/io";
-import { FaBuildingLock } from "react-icons/fa6";
-import { LiaNetworkWiredSolid } from "react-icons/lia";
+import React from 'react';
+import people from '../../assests/images/people.png';
+import rsc from '../../assests/images/rsc.png';
+
 import { PiNetworkLight } from "react-icons/pi";
+import "./hero-section.css";
 
-const HeroSection = () => {
-  return (
-    <section>
-      <Container>
-        <Row>
-          <Col lg="6" md="6">
-            <div className="hero__content">
-              <h2 className="mb-4 hero__title">
-              Empowering Your Future <br /> in Networking, Security, <br /> and Cloud Computing
-              </h2>
-              <p className="mb-5">
-              Are you ready to master the critical skills needed in today's tech-driven world ?<br /> 
-              At NetSecCloud, we offer a comprehensive e-learning experience<br /> 
-              designed for aspiring and seasoned professionals alike.
-              </p>
-            </div>
-            <div className="search">
-              <button className='btn'>
-                GET STARTED  
-              </button>
-              <button className="btn1">
-                VIEW COURSE    
-              </button>
-            </div>
-          </Col>
+const HeroSection = () => (
+  <div className="elearning__header section__padding" id="home">
+    <div className="elearning__header-content">
+      <h1 className="gradient__text">Empowering Your Future in Networking, Security, and Cloud Computing</h1>
+      <p>Are you ready to master the critical skills needed in today's tech-driven world ? At NetSecCloud, we offer a comprehensive e-learning experience designed for aspiring and seasoned professionals alike.</p>
 
-          <Col lg="6" md="6">
-          <PiNetworkLight className="pi-icon" style={{ color: '#17bf9e', fontSize: '400px', marginLeft: '200px' }}/>
-          </Col>
-        </Row>
-      </Container>
-    </section>
-  );
-};
+      <div className="elearning__header-content__input">
+        <button className="btn" type="button">Get Started</button>
+        <button className="btn1" type="button">View Course</button>
+      </div>
+
+      <div className="elearning__header-content__people">
+        <img src={people} />
+        <p>1,600 people requested access a visit in last 24 hours</p>
+      </div>
+    </div>
+
+    <div className="elearning__header-image">
+    <img src={rsc} />
+    </div>
+  </div>
+);
 
 export default HeroSection;

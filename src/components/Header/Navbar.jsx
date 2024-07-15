@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { SiSololearn } from "react-icons/si";
-import { CiShoppingCart } from "react-icons/ci";
 import './navbar.css';
 
 const Navbar = () => {
@@ -26,7 +25,6 @@ const Navbar = () => {
           <p><a className="custom-link" href="#announcements">Announcements</a></p>
           <p><a className="custom-link" href="#contact">Contact</a></p>
         </div>
-        <CiShoppingCart style={{ color: '#17bf9e', fontSize: '27px', marginRight: '10px' }} />
         <p className="sign-in">Sign in</p>
         <button type="button">Sign up</button>
       </div>
