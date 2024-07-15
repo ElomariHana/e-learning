@@ -15,9 +15,6 @@ const Company = () => (
     <MdSecurity style={{ color: '#fff', fontSize: '30px', marginRight: '5px' }}/> Security
     </div>
     <div>
-    <MdSecurity style={{ color: '#fff', fontSize: '30px', marginRight: '5px' }}/> Security
-    </div>
-    <div>
     <FaNetworkWired style={{ color: '#fff', fontSize: '30px', marginRight: '5px' }}/> Network
     </div>
     <div>
