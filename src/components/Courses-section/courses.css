@@ -36,3 +36,9 @@
 .course__top__left h2 {
   font-weight: 600;
 }
+@media screen and (max-width: 700px) {
+  .course__top  {
+      padding: 1rem;
+      flex-direction: column;
+  }
+}

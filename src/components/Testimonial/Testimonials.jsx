@@ -9,7 +9,7 @@ const Testimonials = () => {
       <section className='testimonal padding'>
         <div className='testimonal__container'>
           <h2>Our Students Feedback</h2>
-          <div className='content grid2'>
+          <div className='testimonal__card content grid2'>
             {testimonal.map((val) => (
               <div className='items shadow'>
                 <div className='box flex'>

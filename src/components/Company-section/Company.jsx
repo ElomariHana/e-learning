@@ -9,7 +9,7 @@ import './company-section.css'
 const Company = () => (
   <div className="elearning__brand section__padding">
     <div>
-    <IoMdCloudOutline style={{ color: '#fff', fontSize: '30px', marginRight: '5px' }}/>Cloud Computing 
+    <IoMdCloudOutline style={{ color: '#fff', fontSize: '30px', marginRight: '5px' }}/> Cloud Computing 
     </div>
     <div>
     <MdSecurity style={{ color: '#fff', fontSize: '30px', marginRight: '5px' }}/> Security
