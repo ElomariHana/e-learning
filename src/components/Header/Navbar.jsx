@@ -1,10 +1,25 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { SiSololearn } from "react-icons/si";
+
+import { useNavigate } from 'react-router-dom'; 
+
 import './navbar.css';
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  //useState
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  //functions
+  const handleSignIn = () => {
+    navigate('/login')
+  }
+  const handleSignUp = () => {
+    navigate('/register')
+  }
 
   return (
     <div className="elearning__navbar">
@@ -23,10 +38,10 @@ const Navbar = () => {
           <p><a className="custom-link" href="#courses">Courses</a></p>
           <p><a className="custom-link" href="#aboutus">About Us</a></p>
           <p><a className="custom-link" href="#announcements">Announcements</a></p>
-          <p><a className="custom-link" href="#contact">Contact</a></p>
+          <p><a className="custom-link" href="#footer">Contact</a></p>
         </div>
-        <p className="sign-in">Sign in</p>
-        <button type="button">Sign up</button>
+        <p className="sign-in" onClick={handleSignIn}>Sign in</p>
+        <button type="button" onClick={handleSignUp}>Sign up</button>
       </div>
       <div className="elearning__navbar-menu">
         {toggleMenu
@@ -42,8 +57,8 @@ const Navbar = () => {
             <p><a href="#contact">Contact</a></p>
           </div>
           <div className="elearning__navbar-menu_container-links-sign">
-            <p>Sign in</p>
-            <button type="button">Sign up</button>
+            <p onClick={handleSignIn}>Sign in</p>
+            <button type="button" onClick={handleSignUp}>Sign up</button>
           </div>
         </div>
         )}

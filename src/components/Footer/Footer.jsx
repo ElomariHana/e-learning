@@ -53,7 +53,7 @@ const footerInfoLinks = [
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <Container>
         <Row>
           <Col lg="3" md="6" className="mb-4">
