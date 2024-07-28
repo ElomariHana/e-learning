@@ -12,7 +12,7 @@ import "./about.css";
 
 const AboutUs = () => {
   return (
-    <section id="aboutus">
+    <section id="aboutus" className="section__padding">
       <Container>
         <Row>
           <Col lg="6" md="6">

@@ -1,0 +1,27 @@
+
+.elearning_courses-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.elearning_courses-header_button {
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--color-basic);
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    border: 2px solid var(--color-basic);
+    color: #fff;
+    margin-right: 0.5rem;
+}
+.elearning_courses_content {
+    margin-top: 2rem;
+    padding: 3rem;
+    border-radius: 5px;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+
+}

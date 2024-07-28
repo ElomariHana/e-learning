@@ -22,7 +22,7 @@ const freeCourseData = [
 
 const Announcements = () => {
   return (
-    <section id="announcements">
+    <section id="announcements" className="section__padding">
       <Container>
         <Row>
           <Col lg="12" className="text-center mb-5">

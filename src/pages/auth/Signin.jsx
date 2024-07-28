@@ -1,10 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { SiSololearn } from "react-icons/si";
+import { useNavigate } from 'react-router-dom'; 
 
 import './signin.css'
 
 const Signin = () => {
+  const navigate = useNavigate();
+  const handleSignIn = () => {
+    navigate('/dashboard')
+  }
   return (
     <>
     <div className='elearning__signin'>
@@ -52,7 +57,7 @@ const Signin = () => {
               <p className='link-end'>Forgot password?</p>
             </Link>
           </div>
-          <button type="submit" className="btn-submit">
+          <button type="submit" className="btn-submit" onClick={handleSignIn}>
             Sign in
           </button>
         </form>

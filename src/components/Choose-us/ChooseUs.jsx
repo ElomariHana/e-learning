@@ -9,7 +9,7 @@ import ReactPlayer from "react-player";
 const ChooseUs = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
-    <section>
+    <section className="section__padding">
       <Container>
         <Row>
           <Col lg="6" md="6">
