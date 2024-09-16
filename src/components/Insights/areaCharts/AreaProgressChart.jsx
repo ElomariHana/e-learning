@@ -1,28 +1,18 @@
 const data = [
     {
       id: 1,
-      name: "Jeans",
+      name: "Network Fundamentals",
       percentValues: 70,
     },
     {
       id: 2,
-      name: "Shirts",
+      name: "Cloud Computing",
       percentValues: 40,
     },
     {
       id: 3,
-      name: "Belts",
+      name: "Security",
       percentValues: 60,
-    },
-    {
-      id: 4,
-      name: "Caps",
-      percentValues: 80,
-    },
-    {
-      id: 5,
-      name: "Others",
-      percentValues: 20,
     },
   ];
   
@@ -30,7 +20,7 @@ const data = [
     return (
       <div className="progress-bar">
         <div className="progress-bar-info">
-          <h4 className="progress-bar-title">Most Sold Items</h4>
+          <h4 className="progress-bar-title">Highest-Selling Courses</h4>
         </div>
         <div className="progress-bar-list">
           {data?.map((progressbar) => {

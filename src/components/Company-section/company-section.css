@@ -5,13 +5,11 @@
     align-items: center;
     background-color: var(--color-basic);
 }
-
 .elearning__brand div {
     flex: 1;
     max-width: 170px;
     min-width: 120px;
     margin: 1rem;
-
     display: flex;
     justify-content: center;
     align-items: center;

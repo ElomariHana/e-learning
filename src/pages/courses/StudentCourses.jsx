@@ -1,28 +1,30 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import axios from "axios";
 import { CourseStudent } from "../../components";
 import { Container, Row, Col } from "reactstrap";
-import courseImg1 from "../../assests/images/networking.jpg";
-import courseImg2 from "../../assests/images/visuel-cyber.jpg";
-
+import { NoDataFound } from '../../components';
 import './AllCourses.scss'
-
-const coursesData = [
-    {
-      id: "01",
-      title: "Mastering Network Fundamentals",
-      lesson: 12,
-      imgUrl: courseImg1,
-    },
-  
-    {
-      id: "02",
-      title: "Network Security Essentials",
-      lesson: 12,
-      imgUrl: courseImg2,
-    },
-  ];
+ 
 
 const StudentCourses = () => {
+  const [data, setData] = useState([]);
+  const fetchPurchaseCourse = async () => {
+    try {
+      const token = localStorage.getItem('access_token');
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/user/courses`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+      });
+      setData(response.data);
+    } catch (error) {
+      console.error('Error fetching Data:', error);
+    }
+ 
+   };
+   useEffect(() => {
+     fetchPurchaseCourse();
+   },[]);
     
   return (
     <div className='elearning_courses'>
@@ -33,15 +35,24 @@ const StudentCourses = () => {
         </div>
       </div>
       <div className='elearning_courses_content'>
-      <Container>
-        <Row>
-          {coursesData.map((item) => (
-            <Col lg="4" md="6" sm="6">
-              <CourseStudent key={item.id} item={item} />
-            </Col>
-          ))}
-        </Row>
-      </Container>
+        {
+          data.length === 0 ? 
+          (
+            <NoDataFound/>
+          )
+          :
+          (
+          <Container>
+            <Row>
+              {data.map((item) => (
+              <Col lg="4" md="6" sm="6">
+                <CourseStudent key={item.id} item={item} />
+                </Col>
+                ))}
+                </Row>
+                </Container>
+          )
+        }
       </div>      
     </div>
   )

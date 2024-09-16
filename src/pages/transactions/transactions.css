@@ -1,0 +1,9 @@
+.content-area-table {
+    margin-top: 3rem;
+}
+.status_span {
+    background: rgb(14, 142, 14);
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: white;
+}

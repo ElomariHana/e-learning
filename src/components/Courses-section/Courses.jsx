@@ -1,41 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Container, Row, Col } from "reactstrap";
-import courseImg1 from "../../assests/images/networking.jpg";
-import courseImg2 from "../../assests/images/visuel-cyber.jpg";
-import courseImg3 from "../../assests/images/cloud.jpg";
-import "./courses.css";
 import CourseCard from "./CourseCard";
+import "./courses.css";
 
-const coursesData = [
-  {
-    id: "01",
-    title: "Mastering Network Fundamentals",
-    lesson: 12,
-    price: 100,
-    rating: 5.9,
-    imgUrl: courseImg1,
-  },
-
-  {
-    id: "02",
-    title: "Network Security Essentials",
-    lesson: 12,
-    price: 150,
-    rating: 5.9,
-    imgUrl: courseImg2,
-  },
-
-  {
-    id: "03",
-    title: "Cloud Computing Essentials",
-    lesson: 12,
-    price: 120,
-    rating: 5.9,
-    imgUrl: courseImg3,
-  },
-];
 
 const Courses = () => {
+  const [coursesData, setCoursesData] = useState([]);
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const token = localStorage.getItem('access_token');
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/courses?perPage=100`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+        setCoursesData(response.data.data); 
+      } catch (error) {
+        console.error('Error fetching courses:', error);
+      }
+    };
+    fetchCourses();
+  }, []);
   return (
     <section id="courses">
       <Container>
@@ -49,7 +36,6 @@ const Courses = () => {
                 Each course is crafted by industry experts to provide you with practical, hands-on learning experiences.
                 </p>
               </div>
-
               <div className="w-50 text-end">
                 <button className="button">See All</button>
               </div>
@@ -57,7 +43,7 @@ const Courses = () => {
           </Col>
           {coursesData.map((item) => (
             <Col lg="4" md="6" sm="6">
-              <CourseCard key={item.id} item={item} />
+              <CourseCard key={item.id} item={item} type="landingPage"/>
             </Col>
           ))}
         </Row>

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-
+import ReactPlayer from "react-player";
 import chooseImg from "../../assests/images/b3.png";
 import "./choose-us.css";
-
-import ReactPlayer from "react-player";
 
 const ChooseUs = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -18,17 +16,12 @@ const ChooseUs = () => {
               <p>
               At NetSecCloud Learn, we are committed to providing you with the best educational experience in networking, security, and cloud computing. Here’s why you should choose us:
               Hands-On Learning
-Gain practical experience through hands-on projects and real-world scenarios. Our interactive courses ensure you can apply what you learn immediately.
-
-Flexible Learning
-Access our comprehensive course materials anytime, anywhere. Learn at your own pace with our on-demand video lessons and flexible learning schedules.
-
-Global Community
-Join a thriving community of learners and professionals from around the world. Engage in discussions, share your progress, and collaborate on projects.
+              Gain practical experience through hands-on projects and real-world scenarios. Our interactive courses ensure you can apply what you learn immediately. Flexible Learning
+              Access our comprehensive course materials anytime, anywhere. Learn at your own pace with our on-demand video lessons and flexible learning schedules.
+              Global Community Join a thriving community of learners and professionals from around the world. Engage in discussions, share your progress, and collaborate on projects.
               </p>
             </div>
           </Col>
-
           <Col lg="6" md="6">
             <div className="choose__img">
               {showVideo ? (
@@ -41,7 +34,6 @@ Join a thriving community of learners and professionals from around the world. E
               ) : (
                 <img src={chooseImg} alt="" className="w-100" />
               )}
-
               {!showVideo && (
                 <span className="play__icon">
                   <i

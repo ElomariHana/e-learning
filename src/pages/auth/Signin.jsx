@@ -1,15 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { SiSololearn } from "react-icons/si";
-import { useNavigate } from 'react-router-dom'; 
-
+import { useNavigate } from 'react-router-dom';
+import { useNavigation } from '../../context/NavigationContext'
+import { GrFormView } from "react-icons/gr";
+import { GrFormViewHide } from "react-icons/gr";
+import { MdErrorOutline } from "react-icons/md";
 import './signin.css'
 
 const Signin = () => {
+
   const navigate = useNavigate();
-  const handleSignIn = () => {
-    navigate('/dashboard')
-  }
+  const { navigationState } = useNavigation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(true);
+
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await response.json();
+      const userRole = data.role[0].name;
+
+      if (response.ok) {
+        localStorage.setItem('access_token', data.access_token);
+        localStorage.setItem('user_role', userRole);
+        if (userRole === 'admin') {
+          navigate('/admin/insights');
+        } else if (userRole === 'student') {
+          const { intendedAction, courseId } = navigationState || {};
+          const redirectPath = intendedAction === 'buyCourse' ? `/payment/${courseId}` : '/e-learning/courses';
+          navigate(redirectPath);
+        } else {
+          navigate('/e-learning/courses'); 
+        }
+      } else {
+        setError('An error occurred. Please try again later.')
+      }
+    } catch (error) {
+      setError('Email or password incorrect!')
+    }
+  };
+
   return (
     <>
     <div className='elearning__signin'>
@@ -23,8 +63,9 @@ const Signin = () => {
       </p>
     </div>
     <div className="elearning__signin-content">
-        <form className="elearning__signin-form">
+        <form onSubmit={handleSignIn} className="elearning__signin-form">
           <h4> Login to your account</h4>
+          {error && <div className='error_msg'><MdErrorOutline style={{ fontSize: '20px', marginRight: '5px' }}/>{error}</div>}
           <div className="input-field">
             <label htmlFor="email" className="input-label">
               Email 
@@ -35,6 +76,8 @@ const Signin = () => {
               id="email"
               placeholder="Email"
               autoComplete="off"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               required
             />
           </div>
@@ -42,22 +85,32 @@ const Signin = () => {
             <label htmlFor="password" className="input-label">
               Password
             </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              className="input-control"
-              placeholder="Password"
-              autoComplete="off"
-              required
-            />
+            <div className="password-wrapper">
+                <input
+                  type={passwordVisible ? "password":"text"}
+                  name="password"
+                  id="password"
+                  className="input-control"
+                  placeholder="Password"
+                  autoComplete="off"
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                  required
+                />
+                <span
+                  className="password-toggle-icon"
+                  onClick={() => setPasswordVisible(!passwordVisible)}
+                >
+                  {passwordVisible ? <GrFormViewHide /> : <GrFormView />}
+                </span>
+              </div>
           </div>
           <div className="flex-end">
             <Link to={"/forgotPassword"} className="link-end">
               <p className='link-end'>Forgot password?</p>
             </Link>
           </div>
-          <button type="submit" className="btn-submit" onClick={handleSignIn}>
+          <button type="submit" className="btn-submit">
             Sign in
           </button>
         </form>

@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-
 import courseImg01 from "../../assests/images/Cyber-Security.jpg";
 import courseImg02 from "../../assests/images/machine-learning.jpg";
 import FreeCourseCard from "./FreeCourseCard";
-
 import "./announcement.css";
 
 const freeCourseData = [
@@ -29,7 +27,6 @@ const Announcements = () => {
             <h2 className="fw-bold">Announcements</h2>
             <p>Discover our Feature Courses</p>
           </Col>
-
           {freeCourseData.map((item) => (
             <Col lg="3" md="4" className="mb-4" key={item.id}>
               <FreeCourseCard item={item} />

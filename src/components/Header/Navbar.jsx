@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { SiSololearn } from "react-icons/si";
-
 import { useNavigate } from 'react-router-dom'; 
-
 import './navbar.css';
 
 const Navbar = () => {
 
   const navigate = useNavigate();
-
-  //useState
   const [toggleMenu, setToggleMenu] = useState(false);
-
-  //functions
   const handleSignIn = () => {
     navigate('/login')
   }
@@ -30,7 +24,6 @@ const Navbar = () => {
           NetSecCloud
         </h2>
         </div>
-      
       </div>
       <div className="elearning__navbar-sign">
       <div className="elearning__navbar-links_container">

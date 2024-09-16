@@ -1,13 +1,10 @@
 import React from "react";
-import "./about.css";
 import { Container, Row, Col } from "reactstrap";
-import aboutImg from "../../assests/images/about-us.webp";
-import CountUp from "react-countup";
 import { GrProjects } from "react-icons/gr";
 import { FaSwatchbook } from "react-icons/fa6";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { MdTopic } from "react-icons/md";
-
+import aboutImg from "../../assests/images/about-us.webp";
 import "./about.css";
 
 const AboutUs = () => {
@@ -20,7 +17,6 @@ const AboutUs = () => {
               <img src={aboutImg} alt="" className="w-100" />
             </div>
           </Col>
-
           <Col lg="6" md="6">
             <div className="about__content">
               <h2>About Us</h2>
@@ -29,7 +25,6 @@ const AboutUs = () => {
               and cloud computing. Our mission is to provide you with high-quality, practical education 
               that helps you master the essential skills in these critical fields.
               </p>
-
               <div className="about__counter">
                 <div className=" d-flex gap-5 align-items-center">
                   <div className="single__counter">
@@ -47,7 +42,6 @@ const AboutUs = () => {
                     <p className="counter__title">Learners Worldwide (12K)</p>
                   </div>
                 </div>
-
                 <div className=" d-flex gap-5 align-items-center">
                   <div className="single__counter">
                     <span className="counter">
@@ -55,12 +49,10 @@ const AboutUs = () => {
                     </span>
                     <p className="counter__title">Projects Completed (90K)</p>
                   </div>
-
                   <div className="single__counter">
                     <span className="counter">
                     <MdTopic style={{ color: '#17bf9e', fontSize: '27px', marginRight: '10px' }}/>
                     </span>
-
                     <p className="counter__title">Topics Covered</p>
                   </div>
                 </div>
