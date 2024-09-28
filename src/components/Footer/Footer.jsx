@@ -60,7 +60,6 @@ const Footer = () => {
             <h2 className=" d-flex align-items-center gap-1">
             <SiSololearn style={{ color: '#17bf9e', fontSize: '30px', marginRight: '5px' }}/> NetSecCloud
             </h2>
-
             <div className="follows">
               <p className="mb-0">Follow us on social media</p>
               <span>
@@ -69,21 +68,18 @@ const Footer = () => {
                   <i class="ri-facebook-line"></i>
                 </a>
               </span>
-
               <span>
                 {" "}
                 <a href="facebook.com">
                   <i class="ri-instagram-line"></i>
                 </a>
               </span>
-
               <span>
                 {" "}
                 <a href="facebook.com">
                   <i class="ri-linkedin-line"></i>
                 </a>
               </span>
-
               <span>
                 {" "}
                 <a href="facebook.com">
@@ -92,7 +88,6 @@ const Footer = () => {
               </span>
             </div>
           </Col>
-
           <Col lg="3" md="6" className="mb-4">
             <h6 className="fw-bold">Explore</h6>
             <ListGroup className="link__list">
@@ -104,7 +99,6 @@ const Footer = () => {
               ))}
             </ListGroup>
           </Col>
-
           <Col lg="3" md="6" className="mb-4">
             <h6 className="fw-bold">Information</h6>
             <ListGroup className="link__list">
@@ -116,10 +110,8 @@ const Footer = () => {
               ))}
             </ListGroup>
           </Col>
-
           <Col lg="3" md="6">
             <h6 className="fw-bold">Get in Touch</h6>
-
             <p><FaRegMap style={{ color: '#17bf9e', fontSize: '15px', marginRight: '5px' }}/> Address: Paris, France</p>
             <p><FaPhoneAlt style={{ color: '#17bf9e', fontSize: '15px', marginRight: '5px' }}/> Phone: +33 0123456789 </p>
             <p><IoMail style={{ color: '#17bf9e', fontSize: '15px', marginRight: '5px' }}/> Email: example@gmail.com</p>

@@ -1,0 +1,103 @@
+.elearning__payment__header {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    width: 100%;
+    height: 4rem;
+    background: #17bf9e;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+}
+.header p {
+    color: #fff !important;
+}
+.elearning__payment {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+}
+.elearning__course_info {
+    width: 100%;
+    padding: 3rem;
+
+}
+.elearning__payment_method {
+    width: 100%;
+    padding: 4rem;
+
+}
+/*.separated {
+    background: #aba9a9;
+    width: 2px;
+    height: 700px;
+}*/
+.elearning__modal {
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+}
+.sprt {
+    width: 100%;
+    background: #aba9a9;
+    height: 2px;
+}
+.elearning__modal-button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40px;
+    margin-top: 2rem;
+}
+.elearning__modal-button .master {
+    padding: 1rem;
+    margin-top: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #e4e6ef;
+    background: rgb(67, 66, 66);
+    color: white;
+}
+.elearning__modal-button .paypal {
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #b9effc;
+    background: #5fb6cc;
+}
+.elearning__course_card {
+    display: flex;
+    flex-direction: column;
+
+}
+.course_img img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.elearning__course_card-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.elearning__checkout-form {
+    background-color: #fff;
+    padding: 3rem;
+}
+.elearning__checkout-form button {
+    margin-top: 1rem;
+}

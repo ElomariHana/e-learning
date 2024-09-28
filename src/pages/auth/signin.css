@@ -6,11 +6,14 @@
   flex-direction: column;
   align-items: center;
 }
+.elearning__signin-form h4 {
+  margin-bottom: 1rem;
+}
 .elearning__signin-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .elearning__signin-header-title {
   font-size: 20px;
@@ -25,16 +28,33 @@
   color: #6c757d;
 }
 .elearning__signin-content {
-  padding: 2rem 3rem;
+  padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 600px;
 }
 .input-field {
   position: relative;
   width: 100%;
   margin-bottom: 15px;
+}
+.password-toggle-icon {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #888;
+}
+.error-message {
+  color: red;
+  font-size: 15px !important;
+  align-items: center;
+}
+.password-toggle-icon:hover {
+  color: #333;
 }
 .input-label {
   display: flex;
@@ -44,6 +64,11 @@
   margin: 5px 0;
   text-decoration: none;
   color: #17bf9e;
+  display: flex;
+  justify-content: flex-end;
+}
+.link-end p {
+  font-size: 15px;
 }
 .link-end:hover {
   color: #17bf9e;
@@ -72,8 +97,7 @@
 .input-control:focus::placeholder {
   transform: translateX(5px);
 }
-.input-control:focus,
-.input-control:valid {
+.input-control:focus {
   border: 2px solid #17bf9e;
 }
 .forget_password{
@@ -132,6 +156,28 @@
 .link-text-center {
   text-decoration: none;
   color: #17bf9e !important;
+  font-size: 12px;
+}
+.text-center {
+  margin-top: 0;
+  margin-bottom: 0 !important;
+  font-size: 12px !important;
+}
+.error_msg {
+  background: rgb(225, 28, 28);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.valid_msg {
+  background: rgb(9, 91, 24);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.loading_msg {
+  color: rgb(9, 91, 24);
 }
 @media screen and (max-width: 700px) {
   .elearning__signin-header-title {

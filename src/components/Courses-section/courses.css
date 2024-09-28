@@ -6,6 +6,7 @@
 .course__img img {
   border-radius: 10px;
   margin-bottom: 20px;
+  height: 200px;
 }
 
 .enroll a {
@@ -35,6 +36,13 @@
 
 .course__top__left h2 {
   font-weight: 600;
+}
+.button__card {
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem;
+  color: #fff;
+  border: 1px solid white;
+  background: #17bf9e;
 }
 @media screen and (max-width: 700px) {
   .course__top  {

@@ -1,6 +1,6 @@
 import React from "react";
-import "./newsletter.css";
 import { Container, Row, Col } from "reactstrap";
+import "./newsletter.css";
 
 const Newsletter = () => {
   return (

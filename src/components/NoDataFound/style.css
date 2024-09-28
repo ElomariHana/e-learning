@@ -1,0 +1,14 @@
+.no__data__found {
+    background: #fff;
+    width: 100%;
+    height: 500px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.no__data__found p {
+    font-size: 10px;
+}

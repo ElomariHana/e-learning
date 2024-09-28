@@ -2,8 +2,6 @@ import React from 'react';
 import people from '../../assests/images/people.png';
 import rsc from '../../assests/images/rsc.png';
 import { useNavigate } from 'react-router-dom'; 
-
-import { PiNetworkLight } from "react-icons/pi";
 import "./hero-section.css";
 
 const HeroSection = () => {
@@ -19,7 +17,7 @@ const HeroSection = () => {
 
       <div className="elearning__header-content__input">
         <button className="get_started" type="button" onClick={handleSignIn}>Get Started</button>
-        <button className="btn1" type="button">View Course</button>
+        <button className="btn1" type="button"><a href='#courses'>View Course</a></button>
       </div>
 
       <div className="elearning__header-content__people">
