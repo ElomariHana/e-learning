@@ -19,7 +19,7 @@ import "slick-carousel/slick/slick-theme.css";
 const stripePromise = loadStripe('pk_test_51PuKBkDZoBvvo4QND6sJaBB0oumKqoEt5rG246OgiGIyZeMso7bcVbi14SNM8GJXX5XTHPaupvhBXNsfTHvYE0FJ00UWZmHO9M');
 
 const router = createBrowserRouter([
-  { path: '/e-learning', element: <App /> },
+  { path: '/', element: <App /> },
   { path: '/login', element: <Login /> },
   { path: '/register', element: <Register /> },
   { path: '/forgotPassword', element: <ForgotPassword /> },
