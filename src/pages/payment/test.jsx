@@ -1,12 +1,3 @@
-import React from 'react'
-
-const test = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 /*
 export default test
 //
@@ -290,4 +281,6 @@ export default Payment
                         <RiMastercardFill style={{ color: 'white', fontSize: '30px', marginRight: '1rem', marginBottom: '3px'}}/>
                         <h4>Debit Or Credit Card</h4>
                     </button>
+                        <script src="https://paypal.com/sdk/js?client-id=AV23T4u7C1eFdqiQhs9_2xT_jB4LAmSh2_b0wCrYJPd6ofiMEn3G6dcUt3UuIyEWzglHjsnXCCqYW49l"></script>
+
                     */
