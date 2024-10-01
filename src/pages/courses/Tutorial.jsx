@@ -47,16 +47,16 @@ const Tutorial = () => {
     useEffect(() => {
         fetchLessons();
         fetchCourse();
-    },[]);
+    },[fetchLessons, fetchCourse]);
 
   return (
     <div className='elearning__tuto'>
         <div className='elearning__tuto__heading'>
         <ReactPlayer
-        url="https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi"
-                  //url={selectedVideoUrl ? `http://localhost:8000/storage/my_files/${selectedVideoUrl}` : lessons.length > 0 
-                 // ? `http://localhost:8000/storage/my_files/${lessons[0].video_url}` 
-                 // : ''}
+        //url="https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi"
+                  url={selectedVideoUrl ? `http://localhost:8000/storage/my_files/${selectedVideoUrl}` : lessons.length > 0 
+                  ? `http://localhost:8000/storage/my_files/${lessons[0].video_url}` 
+                  : ''}
                   controls
                   width="100%"
                   height="350px"

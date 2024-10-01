@@ -15,7 +15,6 @@ const CheckoutForm = (props) => {
     const elements = useElements();
     const price = props.price
     const courseId = props.courseId
-    const clientSecret = props.clientSecret
 
     const handleSubmit = async (e) => {
         e.preventDefault();

@@ -21,13 +21,13 @@ const HeroSection = () => {
       </div>
 
       <div className="elearning__header-content__people">
-        <img src={people} />
+        <img src={people} alt='people'/>
         <p>1,600 people requested access a visit in last 24 hours</p>
       </div>
     </div>
 
     <div className="elearning__header-image">
-    <img src={rsc} />
+    <img src={rsc} alt='people'/>
     </div>
   </div>
   );

@@ -33,7 +33,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { theme } = useContext(ThemeContext);
+  //const { theme } = useContext(ThemeContext);
   const { isSidebarOpen, closeSidebar } = useContext(SidebarContext);
   const navbarRef = useRef(null);
   const userRole = localStorage.getItem('user_role');

@@ -91,7 +91,7 @@ const fetchLessons = useCallback(async (page = 1) => {
       useEffect(() => {
         fetchLessons(currentPage);
         //fetchCourses();
-      },[currentPage]);
+      },[fetchLessons, currentPage]);
 
     
   const [modalState, setModalState] = useState({
