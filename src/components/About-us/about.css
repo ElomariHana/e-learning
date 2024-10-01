@@ -25,4 +25,13 @@
   .about__content h2 {
       margin-top: 1rem;
   }
+  .about__content {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about__content {
+    padding-left: 0;
+    margin-top: 0.5rem;
+  }
 }

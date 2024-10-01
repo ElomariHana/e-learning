@@ -13,6 +13,26 @@
   padding: 4rem 6rem;
   padding-top: 70px;
   padding-bottom: 70px;
+
+  @media (max-width: 1400px) {
+    padding: 3rem 4rem;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 2rem 3rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 3rem; 
+  }
+
+  @media (max-width: 576px) {
+    padding: 1.5rem 3rem;
+  }
+
+  @media (max-width: 360px) {
+    padding: 1.5rem 3rem; 
+  }
 }
 
 html, body {

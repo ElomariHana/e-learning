@@ -16,7 +16,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="elearning__navbar">
+    <div className="elearning__navbar section__padding">
       <div className="elearning__navbar-links">
         <div className="elearning__navbar-links_logo">
         <h2 className="d-flex align-items-center gap-1">

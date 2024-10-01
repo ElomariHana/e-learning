@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 6rem;
 }
 .elearning__navbar-links_container a {
   color: black; 
