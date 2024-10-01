@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react'
+import React, { useEffect, useState, useCallback} from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { SiSololearn } from "react-icons/si";
@@ -12,33 +12,34 @@ const Tutorial = () => {
     const [course, setCourse] = useState([]);
     const [selectedVideoUrl, setSelectedVideoUrl] = useState('');
 
-
-    const fetchLessons = async () => {
-        try {
-            const token = localStorage.getItem('access_token');
+    const fetchLessons = useCallback(async () => {
+      try {
+        const token = localStorage.getItem('access_token');
             const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/courses/lessons/${courseId}`, {
               headers: {
                 'Authorization': `Bearer ${token}`,
               },
             });
             setLessons(response.data.data);
-          } catch (error) {
-            console.error('Error fetching Data:', error);
-          }
-        } ;
-        const fetchCourse = async () => {
-            try {
-                const token = localStorage.getItem('access_token');
-                const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/courses/${courseId}`, {
-                  headers: {
-                    'Authorization': `Bearer ${token}`,
-                  },
-                });
-                setCourse(response.data);
-              } catch (error) {
-                console.error('Error fetching Data:', error);
-              }
-            } ;
+      } catch (error) {
+        console.error('Error fetching Data:', error);
+      }
+    }, [courseId]); 
+    const fetchCourse = useCallback(async () => {
+      try {
+        const token = localStorage.getItem('access_token');
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/courses/${courseId}`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
+        setCourse(response.data);
+      } catch (error) {
+        console.error('Error fetching Data:', error);
+      }
+    }, [courseId]); 
+
+
 
         const handleLessonClick = (videoUrl) => {
           setSelectedVideoUrl(videoUrl);

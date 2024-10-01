@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+//import { ThemeContext } from "../../context/ThemeContext";
 import { SidebarContext } from "../../context/SidebarContext"; 
 //import { LIGHT_THEME } from "../../constants/themeConstants";
 import { SiSololearn } from "react-icons/si";

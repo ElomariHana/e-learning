@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -28,29 +28,26 @@ const Profile = () => {
     });
   };
 
-  const fetchUserData = async () => {
+  const fetchUserData = useCallback(async () => {
     try {
-      // Retrieve token from local storage
       const token = localStorage.getItem('access_token');
-
-      // Make API request to fetch courses
       const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/user/profile`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
       });
-      setUserData({
-        ...userData,
+      setUserData((prevUserData) => ({
+        ...prevUserData,
         first_name: response.data.first_name,
         last_name: response.data.last_name,
         email: response.data.email,
         phone: response.data.phone,
-      });
+      }));
       localStorage.setItem('user', JSON.stringify(response.data));
     } catch (error) {
       console.error('Error fetching Data:', error);
     }
-  };
+  }, []); 
   
   const updateProfile = async () => {
     try {
