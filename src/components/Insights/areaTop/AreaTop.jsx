@@ -1,4 +1,4 @@
-import { MdOutlineMenu } from "react-icons/md";
+/*import { MdOutlineMenu } from "react-icons/md";
 import "./AreaTop.scss";
 import { useContext, useEffect, useRef, useState } from "react";
 import { SidebarContext } from "../../../context/SidebarContext";
@@ -71,4 +71,4 @@ const AreaTop = () => {
   );
 };
 
-export default AreaTop;
+export default AreaTop;*/
