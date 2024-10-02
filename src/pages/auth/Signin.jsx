@@ -33,6 +33,7 @@ const Signin = () => {
       if (response.ok) {
         localStorage.setItem('access_token', data.access_token);
         localStorage.setItem('user_role', userRole);
+        console.log('userRole', userRole);
         if (userRole === 'admin') {
           navigate('/admin/insights');
         } else if (userRole === 'student') {
@@ -46,6 +47,7 @@ const Signin = () => {
         setError('An error occurred. Please try again later.')
       }
     } catch (error) {
+      console.log('userRole', error);
       setError('Email or password incorrect!')
     }
   };
