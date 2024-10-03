@@ -17,7 +17,7 @@ const fetchTransactionsData = async () => {
         const token = localStorage.getItem('access_token');
   
         // Make API request to fetch courses
-        const response = await axios.get('http://localhost:8000/api/transactions', {
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/transactions`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

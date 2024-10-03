@@ -49,7 +49,7 @@ const fetchLessons = useCallback(async (page = 1) => {
     setLessons(response.data.data);
     setPageCount(response.data.last_page);
   } catch (error) {
-    console.error('Error fetching Data:', error);
+    console.error('Error fetching lessons', error);
   }
 }, [courseId]);
 
@@ -166,7 +166,7 @@ const fetchLessons = useCallback(async (page = 1) => {
 
       try {
         const token = localStorage.getItem('access_token');
-        const url = modalState.id ? `${process.env.REACT_APP_API_BASE_URL}lessons/${modalState.id}` : `${process.env.REACT_APP_API_BASE_URL}/lessons`;
+        const url = modalState.id ? `${process.env.REACT_APP_API_BASE_URL}/lessons/${modalState.id}` : `${process.env.REACT_APP_API_BASE_URL}/lessons`;
         const method = 'post';
         let data;
         let headers = {
@@ -258,7 +258,7 @@ const fetchLessons = useCallback(async (page = 1) => {
   const handleDelete = async (lessonId) => {
     try {
       const token = localStorage.getItem('access_token');
-      const response = await axios.delete(`http://localhost:8000/api/lessons/${lessonId}`, {
+      const response = await axios.delete(`${process.env.REACT_APP_API_BASE_URL}/lessons/${lessonId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

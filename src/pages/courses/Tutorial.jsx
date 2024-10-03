@@ -55,8 +55,8 @@ const Tutorial = () => {
         <div className='elearning__tuto__heading'>
         <ReactPlayer
         //url="https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi"
-                  url={selectedVideoUrl ? `http://localhost:8000/storage/my_files/${selectedVideoUrl}` : lessons.length > 0 
-                  ? `http://localhost:8000/storage/my_files/${lessons[0].video_url}` 
+                  url={selectedVideoUrl ? `${process.env.REACT_APP_API_STORAGE_URL}/my_files/${selectedVideoUrl}` : lessons.length > 0 
+                  ? `${process.env.REACT_APP_API_STORAGE_URL}/my_files/${lessons[0].video_url}` 
                   : ''}
                   controls
                   width="100%"

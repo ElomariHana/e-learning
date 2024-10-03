@@ -17,7 +17,7 @@ const HeroSection = () => {
 
       <div className="elearning__header-content__input">
         <button className="get_started" type="button" onClick={handleSignIn}>Get Started</button>
-        <button className="btn1" type="button"><a href='#courses'>View Course</a></button>
+        <button className="btn1" type="button" onClick={() => document.getElementById('courses').scrollIntoView({ behavior: 'smooth' })}>View Course</button>
       </div>
 
       <div className="elearning__header-content__people">
