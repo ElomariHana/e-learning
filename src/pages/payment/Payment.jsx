@@ -22,7 +22,7 @@ const Payment = () => {
   const fetchCourse = useCallback(async () => {
     try {
       const token = localStorage.getItem('access_token');
-      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}courses/${courseId}`, {
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/courses/${courseId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -78,7 +78,7 @@ const Payment = () => {
         <div className='elearning__course_info'>
             <div className='elearning__course_card'>
             <div className="course_img">
-              <img src={`${process.env.REACT_APP_API_STORAGE_URL}${course.image || ''}`} alt="" className="w-100" />
+              <img src={`${process.env.REACT_APP_API_STORAGE_URL}${course.image || ''}`} alt="course" className="w-100" />
             </div>
             <h4>{course.title}</h4>
             <p>{course.description}
