@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback} from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { SiSololearn } from "react-icons/si";
-import ReactPlayer from "react-player";
+//import ReactPlayer from "react-player";
 import { FaPlayCircle } from "react-icons/fa";
 import './Tuto.scss'
 
@@ -36,6 +36,7 @@ const Tutorial = () => {
         setCourse(response.data);
       } catch (error) {
         console.error('Error fetching Data:', error);
+        console.log('test', selectedVideoUrl)
       }
     }, [courseId]); 
 
@@ -53,15 +54,7 @@ const Tutorial = () => {
   return (
     <div className='elearning__tuto'>
         <div className='elearning__tuto__heading'>
-        <ReactPlayer
-        //url="https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi"
-                  url={selectedVideoUrl ? `${process.env.REACT_APP_API_STORAGE_URL}/my_files/${selectedVideoUrl}` : lessons.length > 0 
-                  ? `${process.env.REACT_APP_API_STORAGE_URL}/my_files/${lessons[0].video_url}` 
-                  : ''}
-                  controls
-                  width="100%"
-                  height="350px"
-                />
+      
         </div>
         <div className='elearning__tuto-content'>
             <div className='elearning__tuto-content__list'>
