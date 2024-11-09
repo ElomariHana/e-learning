@@ -9,7 +9,7 @@ const CourseStudent = (props) => {
   const handleButton = (courseId) => {
     navigate(`/e-learning/tutorial/${courseId}`)
   }
-  const { id, image, title, lesson} = props.item.course;
+  const { id, image, title, lesson} = props.item;
   const imageSrc = `${process.env.REACT_APP_API_STORAGE_URL}${image || ''}`;
 
 
