@@ -33,21 +33,19 @@ const Signin = () => {
       if (response.ok) {
         localStorage.setItem('access_token', data.access_token);
         localStorage.setItem('user_role', userRole);
-        console.log('userRole', userRole);
         if (userRole === 'admin') {
           navigate('/admin/insights');
         } else if (userRole === 'student') {
           const { intendedAction, courseId } = navigationState || {};
-          const redirectPath = intendedAction === 'buyCourse' ? `/payment/${courseId}` : '/e-learning/courses';
+          const redirectPath = intendedAction === 'buyCourse' ? `/payment/${courseId}` : '/e-learning/available-courses';
           navigate(redirectPath);
         } else {
-          navigate('/e-learning/courses'); 
+          navigate('/e-learning/available-courses'); 
         }
       } else {
         setError('An error occurred. Please try again later.')
       }
     } catch (error) {
-      console.log('userRole', error);
       setError('Email or password incorrect!')
     }
   };

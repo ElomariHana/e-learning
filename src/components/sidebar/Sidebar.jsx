@@ -105,7 +105,7 @@ const Sidebar = () => {
            )}
             {userRole === 'student' && (
             <li className="menu-item">
-              <Link to="/e-learning/mycourses" className={`menu-link ${isActive('/e-learning/mycourses') ? 'active' : ''}`}>
+              <Link to="/e-learning/enrolled-courses" className={`menu-link ${isActive('/e-learning/enrolled-courses') ? 'active' : ''}`}>
                 <span className="menu-link-icon">
                   <MdCastForEducation size={20} />
                 </span>
@@ -115,7 +115,7 @@ const Sidebar = () => {
             )}
             {userRole === 'student' && (
             <li className="menu-item">
-              <Link to="/e-learning/courses" className={`menu-link ${isActive('/e-learning/courses') ? 'active' : ''}`}>
+              <Link to="/e-learning/available-courses" className={`menu-link ${isActive('/e-learning/available-courses') ? 'active' : ''}`}>
                 <span className="menu-link-icon">
                   <RiFolderReduceLine size={18} />
                 </span>
@@ -135,7 +135,7 @@ const Sidebar = () => {
              )}
              {userRole === 'student' && (
             <li className="menu-item">
-              <Link to="/e-learning/profile" className={`menu-link ${isActive('/e-learning/profile') ? 'active' : ''}`}>
+              <Link to="/e-learning/profile" className={`menu-link ${isActive('/e-learning/student-profile') ? 'active' : ''}`}>
                 <span className="menu-link-icon">
                   <CgProfile size={20} />
                 </span>
