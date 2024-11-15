@@ -10,7 +10,7 @@ export { default as AllCourses } from "./courses/AllCourses";
 export { default as Lessons } from "./lessons/Lessons";
 
 export { default as StudentCourses } from "./courses/StudentCourses";
-export { default as Tutorial } from "./courses/Tutorial";
+export { default as Learning } from "./courses/Learning";
 export { default as ManageCourses } from "./courses/ManageCourses";
 export { default as Transactions } from "./transactions/Transactions";
 export { default as Payment } from "./payment/Payment";

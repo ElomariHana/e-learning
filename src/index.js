@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import BaseLayout from './pages/BaseLayout';
 import { NavigationProvider } from './context/NavigationContext'
-import { Login, Insights, Register, ForgotPassword, Profile, AllCourses, StudentCourses, Lessons, Tutorial, ManageCourses, Transactions, Payment, ResetPassword } from './pages'
+import { Login, Insights, Register, ForgotPassword, Profile, AllCourses, StudentCourses, Lessons, ManageCourses, Transactions, Payment, ResetPassword, Learning } from './pages'
 import { ProtectedRoute, Unauthorized } from './components'
 
 import { Elements } from '@stripe/react-stripe-js';
@@ -49,9 +49,9 @@ const router = createBrowserRouter([
         element: <ProtectedRoute allowedRoles={['student']} />,
         children: [
           { path: 'profile', element: <Profile /> },
-          { path: 'courses', element: <AllCourses /> },
-          { path: 'mycourses', element: <StudentCourses /> },
-          { path: 'tutorial/:courseId', element: <Tutorial /> },
+          { path: 'available-courses', element: <AllCourses /> },
+          { path: 'enrolled-courses', element: <StudentCourses /> },
+          { path: 'enrolled-courses/:courseId', element: <Learning /> },
         ]
       }
     ]

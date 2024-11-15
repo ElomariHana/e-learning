@@ -7,7 +7,7 @@ const CourseStudent = (props) => {
 
   const navigate = useNavigate();
   const handleButton = (courseId) => {
-    navigate(`/e-learning/tutorial/${courseId}`)
+    navigate(`/e-learning/enrolled-courses/${courseId}`)
   }
   const { id, image, title, lesson} = props.item;
   const imageSrc = `${process.env.REACT_APP_API_STORAGE_URL}${image || ''}`;
