@@ -42,13 +42,13 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: '/e-learning',
+    path: '/profile',
     element: <BaseLayout />,
     children: [
       {
         element: <ProtectedRoute allowedRoles={['student']} />,
         children: [
-          { path: 'profile', element: <Profile /> },
+          { path: '', element: <Profile /> },
           { path: 'available-courses', element: <AllCourses /> },
           { path: 'enrolled-courses', element: <StudentCourses /> },
           { path: 'enrolled-courses/:courseId', element: <Learning /> },
